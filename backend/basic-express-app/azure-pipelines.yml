@@ -1,18 +1,30 @@
-name: $(BuildID)
-
 trigger:
   branches:
     include:
-      - master
-      - release
-      - feat*
-  paths:
-    include:
-      - 'basic-express-app/*'
+    - master
 
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  - group: dev
+  - name: DOCKER_REPOSITORY
+    value: $(AWS_ACCOUNT_ID).dkr.ecr.$(AWS_REGION).amazonaws.com/$(DOCKER_REPOSITORY_NAME)
+
 steps:
-  - script: |
-      echo "Hello from 'a'"
+- script: |
+    aws ecr get-login-password --region $(AWS_REGION) | docker login --username AWS --password-stdin $(AWS_ACCOUNT_ID).dkr.ecr.$(AWS_REGION).amazonaws.com
+  displayName: 'Login to AWS'
+  env:
+    AWS_ACCESS_KEY_ID: $(AWS_KEY_ID)
+    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET)
+
+- task: Docker@2
+  displayName: Build docker image
+  workingDirectory: ./backend/basic-express-app
+  inputs:
+    repository: $(DOCKER_REPOSITORY)
+    command: buildAndPush
+    Dockerfile: Dockerfile
+    tags: |
+      latest
