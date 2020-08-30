@@ -13,6 +13,7 @@ trigger:
     exclude:
       - 'backend/*'
       - 'frontend/*'
+      - 'utilities/*'
 
 pool:
   vmImage: 'ubuntu-latest'

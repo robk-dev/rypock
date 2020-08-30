@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+*.pem
+connect-to-ec2.sh
+.test_output

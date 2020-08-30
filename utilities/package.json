@@ -1,0 +1,83 @@
+{
+    "name": "rypock-utilities",
+    "version": "0.1.0",
+    "description": "utilities package",
+    "main": "bin/index.js",
+    "author": "Robert Kardjaliev",
+    "license": "UNLICENSED",
+    "engines": {
+        "node": "10.14.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/robk-dev/rypock"
+    },
+    "scripts": {
+        "test": "nyc mocha -r ts-node/register tests/**/*.spec.ts --timeout 20000 --exit",
+        "test:spec": "nyc mocha -r ts-node/register --timeout 20000 --exit",
+        "start": "nodemon -e ts --delay 2000ms --exec \"npm run build\"",
+        "build": "tsc --resolveJsonModule --declaration ",
+        "prettier": "prettier --write \"./{src,tests}/**/*.{ts,js}\"",
+        "prettier:check": "prettier --list-different \"./{src,tests}/**/*.{ts,js}\"",
+        "refresh:vsToken": "vsts-npm-auth -config .npmrc"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.2",
+        "@types/chai": "^4.2.0",
+        "@types/crypto-js": "^3.1.43",
+        "@types/mongodb": "^3.3.1",
+        "@types/redis": "^2.8.13",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.7.3",
+        "chai": "^4.2.0",
+        "dotenv": "^8.1.0",
+        "husky": "^3.0.5",
+        "mocha": "^6.2.0",
+        "nodemon": "^1.19.1",
+        "nyc": "^14.1.1",
+        "prettier": "^1.18.2",
+        "pretty-quick": "^1.11.1",
+        "rimraf": "^3.0.0",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.19.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.6.2",
+        "vsts-npm-auth": "^0.37.0"
+    },
+    "dependencies": {
+        "@azure/storage-blob": "^10.4.1",
+        "bcryptjs": "^2.4.3",
+        "knex": "^0.19.3",
+        "mongodb": "^3.3.2",
+        "node-esapi": "0.0.1",
+        "redis": "^2.8.0",
+        "winston": "^3.2.1",
+        "winston-daily-rotate-file": "^3.10.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run prettier -s",
+            "pre-push": "npm test"
+        }
+    },
+    "nyc": {
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "typings"
+        ],
+        "extension": [
+            ".ts"
+        ],
+        "require": [
+            "ts-node/register"
+        ],
+        "reporter": [
+            "lcov",
+            "json",
+            "html",
+            "cobertura"
+        ]
+    }
+}
