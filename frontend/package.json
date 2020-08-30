@@ -1,0 +1,61 @@
+{
+  "name": "rypock-frontend",
+  "version": "0.1.0",
+  "author": "Robert Kardjaliev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robk-dev/rypock"
+  },
+  "dependencies": {
+    "@editorjs/checklist": "^1.1.0",
+    "@editorjs/code": "^2.5.0",
+    "@editorjs/delimiter": "^1.1.0",
+    "@editorjs/editorjs": "^2.18.0",
+    "@editorjs/embed": "^2.3.1",
+    "@editorjs/header": "^2.5.0",
+    "@editorjs/image": "^2.4.2",
+    "@editorjs/inline-code": "^1.3.1",
+    "@editorjs/link": "^2.2.1",
+    "@editorjs/list": "^1.5.0",
+    "@editorjs/marker": "^1.2.2",
+    "@editorjs/paragraph": "^2.7.0",
+    "@editorjs/personality": "^2.0.1",
+    "@editorjs/quote": "^2.3.0",
+    "@editorjs/raw": "^2.1.2",
+    "@editorjs/simple-image": "^1.3.3",
+    "@editorjs/table": "^1.2.2",
+    "@editorjs/warning": "^1.1.1",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-router-dom": "^5.1.5",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-editor-js": "^1.6.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

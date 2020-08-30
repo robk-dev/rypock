@@ -22,11 +22,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added CRUD operations to express app using utilities
 - Added csurf protection
 - Setup integration tests for utilities and CRUD repo
+- Added basic create react app frontend with editor js as WYSIWYG editor for posts
 
 #### TODO
 
 - setup docker-compose
+- setup image resizing and uploading to storage like blob or s3 bucket // maybe with sharp
 - setup react frontend
-- setup nestjs microservices with grpc
+- setup authentication on protected routes
+- setup nestjs microservices with grpc using express app as template
 - setup kubernetes manifest/helm chart
 - setup pull request and issue templates on github
+- setup smtp for emails
