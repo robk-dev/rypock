@@ -5,9 +5,8 @@
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
     "license": "ISC",
-    "main": "lib/react-frontend.js",
     "directories": {
-        "lib": "lib",
+        "lib": "dist",
         "test": "__tests__"
     },
     "files": [

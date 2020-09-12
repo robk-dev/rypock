@@ -1,3 +1,0 @@
-{
-    "ignore": ["declaration/*", "logs/*", "bin/*", "tests/*", "node_modules/*"]
-}
