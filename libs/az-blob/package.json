@@ -1,6 +1,6 @@
 {
     "name": "@rypock/az-blob",
-    "version": "0.0.1-alpha.0",
+    "version": "0.0.1",
     "description": "Utility package",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
