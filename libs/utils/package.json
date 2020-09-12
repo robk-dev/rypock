@@ -1,6 +1,6 @@
 {
     "name": "@rypock/utils",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Common utilities package",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
