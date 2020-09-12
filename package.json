@@ -1,17 +1,25 @@
 {
-  "name": "rypock",
-  "version": "0.1.0",
-  "description": "the place where people go",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/robk-dev/rypock.git"
-  },
-  "keywords": [],
-  "author": "Robert Kardjaliev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/robk-dev/rypock/issues"
-  },
-  "homepage": "https://github.com/robk-dev/rypock#readme"
+    "name": "rypock",
+    "private": true,
+    "scripts": {
+        "prettier": "prettier --single-quote --write \"./src/**/*.{ts}\"",
+        "prettier:check": "prettier --single-quote --list-different \"./src/**/*.{ts}\"",
+        "publish": "lerna run build && lerna publish"
+    },
+    "devDependencies": {
+        "@types/node": "^14.6.4",
+        "cross-env": "^7.0.2",
+        "husky": "^4.3.0",
+        "lerna": "^3.22.1",
+        "lint-staged": "^10.3.0",
+        "monorepo-run": "^0.4.2",
+        "prettier": "^2.1.1",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.0.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lerna run --concurrency 1 --stream precommit"
+        }
+    }
 }
