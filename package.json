@@ -9,6 +9,10 @@
         "pub": " lerna publish --ignore @rypock/react-frontend",
         "bootstrap": "lerna bootstrap"
     },
+    "engines": {
+        "node": ">= 12.18.3"
+    },
+    "license": "MIT",
     "devDependencies": {
         "@types/node": "^14.6.4",
         "cross-env": "^7.0.2",

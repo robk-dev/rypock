@@ -4,7 +4,7 @@
     "description": "Utility package",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
-    "license": "ISC",
+    "license": "MIT",
     "main": "lib/azure-blob.js",
     "directories": {
         "lib": "lib",
@@ -38,5 +38,6 @@
         "src/**/*.{html,md,yml}": [
             "prettier --ignore-path --single-quote --write"
         ]
-    }
+    },
+    "gitHead": "dfbc405a436f5fbbd255cfe74c397e160eab5549"
 }
