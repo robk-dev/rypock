@@ -1,6 +1,6 @@
 {
     "name": "@rypock/az-blob",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Utility package",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "@azure/storage-blob": "^10.4.1",
-        "@rypock/shared": "0.0.3"
+        "@rypock/shared": "^0.0.4"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [

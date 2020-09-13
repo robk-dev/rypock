@@ -1,6 +1,6 @@
 {
     "name": "@rypock/redis",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Redis repo wrapper",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",

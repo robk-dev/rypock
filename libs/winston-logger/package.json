@@ -1,6 +1,6 @@
 {
     "name": "@rypock/winston-logger",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Basic winston logger",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
@@ -29,7 +29,7 @@
         "url": "https://github.com/robk-dev/rypock/issues"
     },
     "dependencies": {
-        "@rypock/shared": "0.0.3",
+        "@rypock/shared": "^0.0.4",
         "winston": "^3.3.3",
         "winston-daily-rotate-file": "^4.5.0"
     },
