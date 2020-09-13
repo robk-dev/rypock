@@ -10,7 +10,7 @@ export interface IBlobOptions {
 }
 
 /**
- *
+ * Wrapper Service for interacting with Azure Blob Storage
  *
  * @export
  * @class BlobStorageService
