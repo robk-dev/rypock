@@ -13,6 +13,9 @@
     "files": [
         "lib"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/robk-dev/rypock.git"
@@ -42,5 +45,5 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
-    "gitHead": "815b2690e9b8483c11f53ed0fcb9fd168be7c862"
+    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908"
 }

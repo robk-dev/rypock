@@ -4,9 +4,8 @@
     "scripts": {
         "prettier": "prettier --single-quote --write \"./src/**/*.{ts}\"",
         "prettier:check": "prettier --single-quote --list-different \"./src/**/*.{ts}\"",
-        "publish": "npm run build && npm run pub",
-        "build": "lerna run --parallel --ignore @rypock/react-frontend build",
-        "pub": " lerna publish --ignore @rypock/react-frontend",
+        "publish": "npm run build && lerna publish",
+        "build": "lerna run --parallel build",
         "bootstrap": "lerna bootstrap"
     },
     "engines": {

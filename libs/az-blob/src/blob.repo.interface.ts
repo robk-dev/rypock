@@ -1,4 +1,4 @@
-// import { IRepo } from "@rypock/shared";
+import { IRepo } from '@rypock/shared/lib';
 import { BlobType, ContainerCreateResponse } from '@azure/storage-blob/typings/src/generated/src/models';
 import { IContainerListBlobsSegmentOptions } from '@azure/storage-blob';
 
@@ -17,7 +17,7 @@ export interface ListContainersResponse {
     containers: any[];
 }
 
-export interface IContainer /* extends  IRepo<IContainer> */ {
+export interface IContainer extends IRepo<IContainer> {
     name: string;
     properties?: any;
     blob(name: string): IBlob;

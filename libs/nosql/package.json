@@ -1,7 +1,7 @@
 {
-    "name": "@rypock/az-blob",
+    "name": "@rypock/nosql",
     "version": "0.0.2",
-    "description": "Utility package",
+    "description": "Mongo Repo Wrapper",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
     "license": "MIT",
@@ -13,21 +13,25 @@
     "files": [
         "lib"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
         "test": "echo \"Error: run tests from root\" && exit 1",
-        "precommit": "lint-staged",
-        "build": "tsc"
+        "build": "tsc",
+        "precommit": "lint-staged"
     },
     "bugs": {
         "url": "https://github.com/robk-dev/rypock/issues"
     },
     "dependencies": {
-        "@azure/storage-blob": "^10.4.1",
-        "@rypock/shared": "0.0.1"
+        "@rypock/shared": "0.0.1",
+        "@types/mongodb": "^3.5.27",
+        "mongodb": "^3.6.2"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
@@ -39,6 +43,5 @@
         "src/**/*.{html,md,yml}": [
             "prettier --ignore-path --single-quote --write"
         ]
-    },
-    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908"
+    }
 }
