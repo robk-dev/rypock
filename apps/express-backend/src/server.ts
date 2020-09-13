@@ -12,7 +12,7 @@ const stoppable = require('stoppable');
 const http = require('http');
 
 import { injector, compare } from '@rypock/utils';
-import { ILogger, IConnectionManager } from '@rypock/shared/lib';
+import { ILogger, IConnectionManager } from '@rypock/shared';
 
 // types
 import { RedisClient } from 'redis';

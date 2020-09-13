@@ -21,7 +21,6 @@
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
         "precommit": "lint-staged",
         "build": "tsc"
     },

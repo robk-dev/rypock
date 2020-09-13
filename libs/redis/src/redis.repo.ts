@@ -1,4 +1,4 @@
-import { IConnectionManager, IRepo, ILogger } from '@rypock/shared/lib';
+import { IConnectionManager, IRepo, ILogger } from '@rypock/shared';
 import { RedisClient } from 'redis';
 
 export interface IRedisInsertOptions {

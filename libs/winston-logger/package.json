@@ -29,17 +29,9 @@
         "url": "https://github.com/robk-dev/rypock/issues"
     },
     "dependencies": {
-        "@rypock/shared": "^0.0.4",
+        "@rypock/shared": "file:../shared",
         "winston": "^3.3.3",
         "winston-daily-rotate-file": "^4.5.0"
-    },
-    "devDependencies": {
-        "@types/chai": "^4.2.12",
-        "@types/mocha": "^8.0.3",
-        "chai": "^4.2.0",
-        "mocha": "^8.1.3",
-        "nyc": "^15.1.0",
-        "ts-node": "^9.0.0"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [

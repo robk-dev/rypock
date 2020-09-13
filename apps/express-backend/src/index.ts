@@ -1,7 +1,8 @@
 // initialize global singleton
 import './factory';
 
-import { injector, ILogger } from 'rypock-utilities';
+import { injector } from '@rypock/utils';
+import { ILogger } from '@rypock/shared';
 import { Server } from './server';
 // import * as setup from "./setup";
 const logger = injector.get<ILogger>('Logger');

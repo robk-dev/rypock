@@ -18,7 +18,6 @@
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
         "precommit": "lint-staged",
         "build": "tsc"
     },
@@ -27,7 +26,7 @@
     },
     "dependencies": {
         "@azure/storage-blob": "^10.4.1",
-        "@rypock/shared": "^0.0.4"
+        "@rypock/shared": "file:../shared"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
