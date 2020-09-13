@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import EditorJs from 'react-editor-js';
 // import Button from '../../components/UI/Button/Button'
-import axios from 'axios';
+// import axios from 'axios';
 
 import './Editor.css';
 
@@ -25,9 +25,9 @@ import Personality from '@editorjs/personality';
 // import TextField from '@material-ui/core/TextField';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Button, Container, Typography, Box, Paper } from '@material-ui/core';
+import { Grid, Button, /* Container, */ Typography, Box, Paper } from '@material-ui/core';
 
-const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             '& > *': {
@@ -110,20 +110,20 @@ export const EDITOR_JS_TOOLS = {
 };
 
 const ReactEditor = () => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const instanceRef: any = useRef();
 
-    async function handleSave() {
-        const savedData = await instanceRef.current.save();
-        axios
-            .post('http://localhost:8080/article', { data: savedData })
-            .then((response) => {
-                console.log({ response });
-            })
-            .catch(console.error);
+    // async function handleSave() {
+    //     const savedData = await instanceRef.current.save();
+    //     axios
+    //         .post('http://localhost:8080/article', { data: savedData })
+    //         .then((response) => {
+    //             console.log({ response });
+    //         })
+    //         .catch(console.error);
 
-        console.log('savedData', savedData);
-    }
+    //     console.log('savedData', savedData);
+    // }
 
     return (
         <React.Fragment>
