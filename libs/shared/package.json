@@ -1,6 +1,6 @@
 {
     "name": "@rypock/shared",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Shared package for core interfaces",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
