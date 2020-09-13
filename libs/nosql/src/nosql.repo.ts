@@ -1,4 +1,4 @@
-import { IRepo, IConnectionManager } from '@rypock/shared/lib';
+import { IRepo, IConnectionManager } from '@rypock/shared';
 import {
     CollectionInsertManyOptions,
     CollectionInsertOneOptions,

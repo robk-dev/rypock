@@ -5,7 +5,12 @@
         "prettier": "prettier --single-quote --write \"./src/**/*.{ts}\"",
         "prettier:check": "prettier --single-quote --list-different \"./src/**/*.{ts}\"",
         "publish": "npm run build && lerna publish",
+        "update": "lerna run --parallel update",
         "build": "lerna run --parallel build",
+        "test": "lerna run --parallel test",
+        "tests:unit": "lerna run --parallel tests:unit",
+        "tests:integration": "lerna run --parallel tests:integration",
+        "tests:incr": "lerna run test:incr --concurrency 1 --stream --since master ",
         "bootstrap": "lerna bootstrap"
     },
     "engines": {
@@ -13,7 +18,6 @@
     },
     "license": "MIT",
     "devDependencies": {
-        "@types/node": "^14.6.4",
         "cross-env": "^7.0.2",
         "husky": "^4.3.0",
         "lerna": "^3.22.1",
@@ -21,6 +25,7 @@
         "monorepo-run": "^0.4.2",
         "prettier": "^2.1.1",
         "rimraf": "^3.0.2",
+        "ts-node": "^9.0.0",
         "typescript": "^4.0.2"
     },
     "husky": {

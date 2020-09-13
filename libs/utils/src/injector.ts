@@ -1,3 +1,8 @@
+/**
+ * Wrapped object with get/set method for getting dependencies on demand.
+ *
+ * @class Injector
+ */
 class Injector {
     private singleton: any = {};
 

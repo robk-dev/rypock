@@ -1,5 +1,5 @@
 import { Db, MongoClient } from 'mongodb';
-import { ILogger, IConnectionManager } from '@rypock/shared/lib';
+import { ILogger, IConnectionManager } from '@rypock/shared';
 
 export interface INoSQLConnectionConfigs {
     URI: string;
@@ -16,6 +16,7 @@ export class NoSQLConnectionManager implements IConnectionManager<Db> {
 
     public async connect() {
         return new Promise((resolve, reject) => {
+            console.log({ config: this.configs, URI: this.configs.URI });
             MongoClient.connect(
                 this.configs.URI,
                 {

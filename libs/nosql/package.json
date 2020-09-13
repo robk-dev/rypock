@@ -21,7 +21,7 @@
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
+        "test": "nyc mocha -r ts-node/register __tests__/**/*.spec.ts --timeout 20000 --exit",
         "build": "tsc",
         "precommit": "lint-staged"
     },
@@ -29,9 +29,8 @@
         "url": "https://github.com/robk-dev/rypock/issues"
     },
     "dependencies": {
-        "@rypock/shared": "0.0.1",
-        "@types/mongodb": "^3.5.27",
-        "mongodb": "^3.6.2"
+        "@rypock/shared": "0.0.3",
+        "mongodb": "^3.3.2"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
@@ -43,5 +42,15 @@
         "src/**/*.{html,md,yml}": [
             "prettier --ignore-path --single-quote --write"
         ]
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.12",
+        "@types/mocha": "^8.0.3",
+        "@types/mongodb": "^3.5.27",
+        "chai": "^4.2.0",
+        "dotenv": "^8.2.0",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "ts-node": "^9.0.0"
     }
 }

@@ -1,6 +1,6 @@
 import { createClient, RedisClient, RedisError } from 'redis';
 
-import { ILogger, IConnectionManager } from '@rypock/shared/lib';
+import { ILogger, IConnectionManager } from '@rypock/shared';
 
 export interface IRedisConnectionConfigs {
     connectTimeout?: number;

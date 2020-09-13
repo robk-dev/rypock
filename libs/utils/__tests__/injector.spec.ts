@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { injector } from "../src/lib";
+import { injector } from "../src/";
 
 const mockObject = { foo: "bar" };
 

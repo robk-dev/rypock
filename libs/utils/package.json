@@ -21,7 +21,7 @@
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
+        "test": "nyc mocha -r ts-node/register __tests__/**/*.spec.ts --timeout 20000 --exit",
         "precommit": "lint-staged",
         "build": "tsc"
     },
@@ -32,7 +32,13 @@
         "bcryptjs": "^2.4.3"
     },
     "devDependencies": {
-        "@types/bcryptjs": "^2.4.2"
+        "@types/bcryptjs": "^2.4.2",
+        "@types/chai": "^4.2.12",
+        "@types/mocha": "^8.0.3",
+        "chai": "^4.2.0",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "ts-node": "^9.0.0"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
@@ -45,5 +51,24 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
-    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908"
+    "nyc": {
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "typings"
+        ],
+        "extension": [
+            ".ts"
+        ],
+        "require": [
+            "ts-node/register"
+        ],
+        "reporter": [
+            "lcov",
+            "json",
+            "html",
+            "cobertura"
+        ]
+    }
 }

@@ -1,7 +1,2 @@
-'use strict';
-
-module.exports = redis;
-
-function redis() {
-    // TODO
-}
+export * from './redis.connector';
+export * from './redis.repo';
