@@ -16,7 +16,6 @@ export class NoSQLConnectionManager implements IConnectionManager<Db> {
 
     public async connect() {
         return new Promise((resolve, reject) => {
-            console.log({ config: this.configs, URI: this.configs.URI });
             MongoClient.connect(
                 this.configs.URI,
                 {

@@ -1,4 +1,4 @@
-import * as Joi from '@hapi/joi';
+import * as Joi from 'joi';
 
 const version = 'uuidv4';
 const error = new Error(' Id validation failed');

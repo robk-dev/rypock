@@ -1,4 +1,4 @@
-import * as Joi from '@hapi/joi';
+import * as Joi from 'joi';
 import { optional_uuid, required_uuid } from './uuid';
 
 export const POST_USERS_SCHEMA = Joi.object().keys({

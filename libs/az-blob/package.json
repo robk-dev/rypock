@@ -1,6 +1,6 @@
 {
     "name": "@rypock/az-blob",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "description": "Utility package",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
@@ -32,7 +32,7 @@
         "src/**/*.{js,jsx,ts,tsx}": [
             "prettier --ignore-path --single-quote --write"
         ],
-        "src/**/*{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
+        "src/**/*.{json}": [
             "prettier --ignore-path --parser json --write"
         ],
         "src/**/*.{html,md,yml}": [

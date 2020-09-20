@@ -1,5 +1,4 @@
 import { POST_ACCOUNT_SCHEMA } from './schemas/accounts-schema';
-import * as Joi from '@hapi/joi';
 import { NoSQLRepo } from '@rypock/nosql';
 import { hash, encrypt, generateAESKey } from '@rypock/utils';
 import { ILogger } from '@rypock/shared';
@@ -26,7 +25,7 @@ export class Accounts implements IAccounts {
 
         this.logger.debug('Accounts.create(); // validating body');
         // Validate req.body using the schema and validation options
-        const data: Models.UnsafeAccount | any = await Joi.validate(unsafeAccount, POST_ACCOUNT_SCHEMA, _validationOptions);
+        const data: Models.UnsafeAccount | any = await POST_ACCOUNT_SCHEMA.validate(unsafeAccount, _validationOptions);
         const key = generateAESKey() as string;
         const date = new Date().toISOString();
 

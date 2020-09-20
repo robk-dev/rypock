@@ -1,26 +1,26 @@
 /* middlewares/SchemaValidator.js */
 
 import * as _ from 'lodash';
-import * as Joi from '@hapi/joi';
+import * as Joi from 'joi';
 import * as express from 'express';
 import * as status from 'http-status';
 
 import { schemas } from '../models/schemas';
 import { IError } from '../interfaces/errors.interface';
 
+const _validationOptions = {
+    abortEarly: false, // abort after the first validation error
+    allowUnknown: false, // allow unknown keys that will be ignored
+    stripUnknown: true, // remove unknown keys from the validated data
+};
+
 export function validateMiddleware() {
     return async (req: express.Request, res: express.Response, next: express.NextFunction) => {
-        const _validationOptions = {
-            abortEarly: false, // abort after the first validation error
-            allowUnknown: false, // allow unknown keys that will be ignored
-            stripUnknown: true, // remove unknown keys from the validated data
-        };
-
         let { url = '' } = req;
         url = url.split('/')[1] || '';
         const method = req.method.toLowerCase();
 
-        console.log({ method, url });
+        // console.log({ method, url });
 
         // if there's no schemas for the route, continue
         if (!_.has(schemas, url)) {
@@ -36,12 +36,11 @@ export function validateMiddleware() {
             });
         }
 
-        const _schema = _.get(schemas[url].methods, method);
+        const schema = _.get(schemas[url].methods, method);
 
         try {
-            console.log('about to validate');
             // Validate req.body using the schema and validation options
-            const data = await Joi.validate(req.body, _schema, _validationOptions);
+            const data = await schema.validate(req.body, _validationOptions);
             req.body = data;
             console.log('validated', { data });
             return next();
