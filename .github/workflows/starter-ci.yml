@@ -21,8 +21,8 @@ jobs:
       with:
         node-version: 12 # ${{ matrix.node-version }}
     - name: Install
-      run: yarn install
-      
+      run: yarn bootstrap
+
     - name: Build
       run: yarn build
 
