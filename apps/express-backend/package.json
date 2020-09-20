@@ -1,6 +1,6 @@
 {
     "name": "@rypock/express-backend",
-    "version": "0.0.0",
+    "version": "0.1.1",
     "description": "Basic express template",
     "author": "robk <robk@robk.dev>",
     "homepage": "https://github.com/robk-dev/rypock#readme",
