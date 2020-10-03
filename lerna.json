@@ -1,8 +1,0 @@
-{
-    "packages": [
-        "libs/*",
-        "apps/*"
-    ],
-    "version": "0.1.1",
-    "npmClient": "yarn"
-}

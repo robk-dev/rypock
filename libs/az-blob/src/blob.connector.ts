@@ -93,10 +93,10 @@ export class BlobStorageService implements IBlobStorageService {
     /**
      * Aggregates all containers even if it takes multiple LIST operations.
      *
-     * @returns {Promise<any>}
+     * @returns {Promise<ListContainersResponse>}
      * @memberof BlobStorageService
      */
-    public async listAllContainers(): Promise<any> {
+    public async listAllContainers(): Promise<ListContainersResponse> {
         let marker;
         let containers: any[] = [];
         try {

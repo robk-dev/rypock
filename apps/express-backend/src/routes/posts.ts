@@ -4,7 +4,7 @@ import { ILogger } from '@rypock/shared';
 import { IPosts } from '../models';
 import * as status from 'http-status';
 
-const router = express.Router();
+const router: express.Router = express.Router();
 
 router.get('/:id', async (req: express.Request, res: express.Response) => {
     const postsDB = injector.get<IPosts>('posts');

@@ -19,7 +19,7 @@ export class Container implements IContainer {
         this.containerURL = ContainerURL.fromServiceURL(options.serviceURL, this.name);
     }
 
-    public blob(name: string) {
+    public blob(name: string): Blob {
         const key = { name };
         let blob: any;
         if (this.blobs.has(key)) {

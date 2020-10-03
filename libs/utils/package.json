@@ -23,7 +23,8 @@
     "scripts": {
         "test": "nyc mocha -r ts-node/register __tests__/**/*.spec.ts --timeout 20000 --exit",
         "precommit": "lint-staged",
-        "build": "tsc"
+        "build": "node_modules/.bin/my-build",
+        "my-bulk-command": "node_modules/.bin/my-bulk-command"
     },
     "bugs": {
         "url": "https://github.com/robk-dev/rypock/issues"
@@ -41,6 +42,18 @@
         "src/**/*.{html,md,yml}": [
             "prettier --ignore-path --single-quote --write"
         ]
+    },
+    "devDependencies": {
+        "@rypock/toolchain": "~0.1.1",
+        "@types/chai": "^4.2.12",
+        "@types/mocha": "^8.0.3",
+        "@types/node": "^14.11.2",
+        "typescript": "~4.0.3",
+        "@types/bcryptjs": "~2.4.2",
+        "nyc": "~15.1.0",
+        "ts-node": "~9.0.0",
+        "mocha": "~8.1.3",
+        "chai": "~4.2.0"
     },
     "nyc": {
         "include": [

@@ -20,13 +20,24 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12 # ${{ matrix.node-version }}
-    - name: Install
-      run: npm i -g lerna
-    - name: Install
-      run: yarn bootstrap
+    
+    # Rush
+    - name: Checking for missing change logs
+      run: node common/scripts/install-run-rush.js change -v
 
-    - name: Build
-      run: yarn build
+    - name: Installing
+      run: node common/scripts/install-run-rush.js install -v
+
+    - name: Building
+      run: node common/scripts/install-run-rush.js rebuild --verbose
+
+    # - name: Install
+    #   run: npm i -g lerna
+    # - name: Install
+    #   run: yarn bootstrap
+
+    # - name: Build
+    #   run: yarn build
 
     # - name: Git Identity
     #   run: |

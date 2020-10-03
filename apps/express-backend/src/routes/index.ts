@@ -4,7 +4,7 @@ import { router as postRoutes } from './posts';
 
 import { Router } from 'express';
 
-const routes = Router();
+const routes: Router = Router();
 
 routes.use(
     '/accounts',

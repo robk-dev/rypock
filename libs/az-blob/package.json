@@ -19,14 +19,26 @@
     },
     "scripts": {
         "precommit": "lint-staged",
-        "build": "tsc"
+        "build": "node_modules/.bin/my-build",
+        "my-bulk-command": "node_modules/.bin/my-bulk-command"
     },
     "bugs": {
         "url": "https://github.com/robk-dev/rypock/issues"
     },
     "dependencies": {
         "@azure/storage-blob": "^10.4.1",
-        "@rypock/shared": "file:../shared"
+        "@rypock/shared": "~0.1.1"
+    },
+    "devDependencies": {
+        "typescript": "~4.0.3",
+        "@rypock/toolchain": "~0.1.1",
+        "@types/node": "~14.11.2",
+        "@types/chai": "~4.2.12",
+        "chai": "~4.2.0",
+        "@types/mocha": "~8.0.3",
+        "mocha": "~8.1.3",
+        "nyc": "~15.1.0",
+        "ts-node": "~9.0.0"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [

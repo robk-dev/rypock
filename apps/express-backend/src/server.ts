@@ -15,7 +15,6 @@ import { injector, compare } from '@rypock/utils';
 import { ILogger, IConnectionManager } from '@rypock/shared';
 
 // types
-import { RedisClient } from 'redis';
 import { Db } from 'mongodb';
 import { IAccounts } from './models';
 
@@ -37,7 +36,7 @@ export class Server {
                 name?: string;
                 description?: string;
             };
-            sessionStore: IConnectionManager<RedisClient>;
+            sessionStore: IConnectionManager<any>;
             logger: ILogger;
             dbConnectionManager: IConnectionManager<Db>;
             // routes: express.Router[] | any;
@@ -192,7 +191,7 @@ export class Server {
             //     res.json({ msg: 'yay', session: req.session });
             // });
 
-            app.get('/', (req: express.Request, res: express.Response) => {
+            app.get('/', (req: express.Request & any, res: express.Response) => {
                 res.json({ cookies: req.cookies, signed_cookies: req.signedCookies, session: req.session });
             });
 

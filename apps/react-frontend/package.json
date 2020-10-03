@@ -85,5 +85,8 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
-    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908"
+    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908",
+    "devDependencies": {
+        "@rypock/toolchain": "~0.1.1"
+    }
 }

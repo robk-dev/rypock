@@ -22,7 +22,9 @@
     },
     "scripts": {
         "precommit": "lint-staged",
-        "build": "tsc"
+        "build": "node_modules/.bin/my-build",
+        "prepare": "tsc",
+        "my-bulk-command": "node_modules/.bin/my-bulk-command"
     },
     "bugs": {
         "url": "https://github.com/robk-dev/rypock/issues"
@@ -38,5 +40,10 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
-    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908"
+    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908",
+    "devDependencies": {
+        "typescript": "~4.0.3",
+        "@rypock/toolchain": "~0.1.1",
+        "@types/node": "~14.11.2"
+    }
 }
