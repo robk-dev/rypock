@@ -16,7 +16,6 @@
         "declaration": true,
         "importHelpers": true,
         "lib": ["dom", "es5", "es6", "es7"],
-        "resolveJsonModule": true,
         "esModuleInterop": true
     },
     "compileOnSave": true,
