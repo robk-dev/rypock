@@ -19,11 +19,8 @@
         "url": "git+https://github.com/robk-dev/rypock.git"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "precommit": "lint-staged"
+        "build": "heft test --clean",
+        "start": "heft start"
     },
     "bugs": {
         "url": "https://github.com/robk-dev/rypock/issues"
@@ -54,12 +51,10 @@
         "@types/react-dom": "latest",
         "@types/react-router-dom": "^5.1.5",
         "axios": "^0.19.2",
-        "classnames": "^2.2.6",
         "react": "latest",
         "react-dom": "latest",
         "react-editor-js": "^1.6.2",
         "react-router-dom": "^5.2.0",
-        "react-scripts": "latest",
         "typescript": "latest"
     },
     "browserslist": {
@@ -85,9 +80,17 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
+    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908",
     "devDependencies": {
         "@rypock/toolchain": "~0.1.1",
         "@rushstack/eslint-config": "2.3.0",
-        "@rushstack/heft": "0.19.4"
+        "@rushstack/heft": "0.19.4",
+        "@types/heft-jest": "1.0.2",
+        "@types/webpack-env": "1.15.3",
+        "css-loader": "5.0.1",
+        "eslint": "7.12.1",
+        "html-webpack-plugin": "4.5.0",
+        "style-loader": "2.0.0",
+        "webpack": "~4.44.2"
     }
 }

@@ -223,6 +223,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@types/webpack-env",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "axios",
       "allowedCategories": [ "production" ]
     },
@@ -259,11 +263,19 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "css-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "csurf",
       "allowedCategories": [ "production" ]
     },
     {
       "name": "dotenv",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint",
       "allowedCategories": [ "production" ]
     },
     {
@@ -284,6 +296,10 @@
     },
     {
       "name": "hpp",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "html-webpack-plugin",
       "allowedCategories": [ "production" ]
     },
     {
@@ -371,6 +387,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "style-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "supertest",
       "allowedCategories": [ "production" ]
     },
@@ -380,6 +400,10 @@
     },
     {
       "name": "uuid",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack",
       "allowedCategories": [ "production" ]
     },
     {
