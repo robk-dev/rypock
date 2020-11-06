@@ -95,6 +95,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@rushstack/eslint-config",
+      "allowedCategories": [ "libs", "production" ]
+    },
+    {
+      "name": "@rushstack/heft",
+      "allowedCategories": [ "libs", "production" ]
+    },
+    {
       "name": "@rypock/nosql",
       "allowedCategories": [ "production" ]
     },
@@ -161,6 +169,10 @@
     {
       "name": "@types/hapi__joi",
       "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/heft-jest",
+      "allowedCategories": [ "libs", "production", "tools" ]
     },
     {
       "name": "@types/helmet",

@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { Logger } from "../src/";
 
 describe("Logger:", async () => {

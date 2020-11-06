@@ -1,2 +1,1 @@
-#!/usr/bin/env node
-require('../lib/start.js')
+require('../lib/start.js');

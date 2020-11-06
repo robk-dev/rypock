@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { generateAESKey, encrypt, decrypt, hash, compare } from "../src";
 
 const plainTextPassword = "some_text";

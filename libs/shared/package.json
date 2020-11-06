@@ -40,10 +40,11 @@
             "prettier --ignore-path --single-quote --write"
         ]
     },
-    "gitHead": "d5eaea7c0f1f5cd5ae1774b717f014064fb8d908",
     "devDependencies": {
-        "typescript": "~4.0.3",
+        "typescript": "~4.0.5",
         "@rypock/toolchain": "~0.1.1",
-        "@types/node": "~14.11.2"
+        "@types/node": "14.14.6",
+        "@rushstack/heft": "0.19.4",
+        "@rushstack/eslint-config": "2.3.0"
     }
 }

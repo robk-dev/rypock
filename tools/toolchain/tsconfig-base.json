@@ -1,19 +1,18 @@
 {
     "$schema": "http://json.schemastore.org/tsconfig",
-
     "compilerOptions": {
         "outDir": "../../../../../lib",
         "rootDirs": ["../../../../../src/"],
         "forceConsistentCasingInFileNames": true,
         "jsx": "react",
         "declaration": true,
+        "declarationMap": true,
         "sourceMap": true,
-        
         "inlineSources": true,
         "experimentalDecorators": true,
         "strict": true,
         "esModuleInterop": true,
-        "types": ["node"],
+        "types": ["node", "heft-jest"],
         "newLine": "CRLF",
         "module": "commonjs",
         "target": "es2017",

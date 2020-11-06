@@ -1,8 +1,7 @@
 {
     "extends": "./node_modules/@rypock/toolchain/tsconfig-base.json",
     "compilerOptions": {
-        "outDir": "./lib",
-        "types": ["node", "mocha", "chai"]
+        "outDir": "./lib"
     },
     "include": [
         "./src"

@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { NoSQLConnectionManager, NoSQLRepo } from "../src";
 import * as path from "path";
 import { ILogger } from "@rypock/shared";

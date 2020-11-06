@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { RedisConnectionManager, RedisRepo } from "../src";
 import * as path from "path";
 import { ILogger } from "@rypock/shared";
